@@ -1,0 +1,17 @@
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+
+import React from "react";
+import { RestaurantsScreen } from "./src/features/restaurants/screens/restaurants.screen";
+
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Platform,
+  StatusBar,
+} from "react-native";
+
+export default function App() {
+  return <RestaurantsScreen />;
+}
