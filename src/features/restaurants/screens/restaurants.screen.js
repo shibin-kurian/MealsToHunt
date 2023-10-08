@@ -34,7 +34,7 @@ export const RestaurantsScreen = () => {
       <Search />
       <RestaurantList
         data={restaurants}
-        renderItem={(item) => (
+        renderItem={({ item }) => (
           <Spacer position="bottom" size="large">
             <RestaurantInfo restaurant={item} />
           </Spacer>

@@ -27,6 +27,7 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
     rating = 4,
     isClosedTemporarily = true,
   } = restaurant;
+  console.log(restaurant);
   const ratingArray = Array.from(new Array(Math.floor(rating)));
 
   return (
