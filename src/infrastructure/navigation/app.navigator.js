@@ -36,10 +36,12 @@ const createScreenOptions = ({ route }) => {
   };
 };
 
-<NavigationContainer>
-  <Tab.Navigator screenOptions={createScreenOptions}>
-    <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
-    <Tab.Screen name="Map" component={Map} />
-    <Tab.Screen name="Settings" component={Settings} />
-  </Tab.Navigator>
-</NavigationContainer>;
+export const AppNavigator = () => (
+  <NavigationContainer>
+    <Tab.Navigator screenOptions={createScreenOptions}>
+      <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
+      <Tab.Screen name="Map" component={Map} />
+      <Tab.Screen name="Settings" component={Settings} />
+    </Tab.Navigator>
+  </NavigationContainer>
+);
