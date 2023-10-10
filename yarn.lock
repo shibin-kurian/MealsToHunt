@@ -2236,6 +2236,11 @@
   resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-1.3.18.tgz#d8364b40276f3efb9c229c39da3b8b465f18f0a2"
   integrity sha512-/0hwnJkrr415yP0Hf4PjUKgGyfshrvNUKFXN85Mrt1gY49hy9IwxZgrrxlh0THXkPeq8q4VWw44eHDfAcQf20Q==
 
+"@react-navigation/elements@^1.3.19":
+  version "1.3.19"
+  resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-1.3.19.tgz#18a4a754836af19c20d987e8ffc4f8b0ee2cbece"
+  integrity sha512-7hLvSYKPuDS070pza5gd43WDX7QgfuEmuTWNbCJhKdWlLudYmq3qzxGCBwCfO2dEI6+p8tla5wruaWiGKAbTYw==
+
 "@react-navigation/native@^6.1.7":
   version "6.1.7"
   resolved "https://registry.npmjs.org/@react-navigation/native/-/native-6.1.7.tgz"
@@ -2252,6 +2257,15 @@
   integrity sha512-lTM8gSFHSfkJvQkxacGM6VJtBt61ip2XO54aNfswD+KMw6eeZ4oehl7m0me3CR9hnDE4+60iAZR8sAhvCiI3NA==
   dependencies:
     nanoid "^3.1.23"
+
+"@react-navigation/stack@^6.3.18":
+  version "6.3.18"
+  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-6.3.18.tgz#4e27bcec6d4edc2275cbb6164089db0d95888053"
+  integrity sha512-jAXneaLAs57xvyMFkebEyGCZDyz90KnaN7fM9f5Bu+Gx3KnoppdNfT4drpmN/f5f32L0eXS4aRAvuDrFT1mFfw==
+  dependencies:
+    "@react-navigation/elements" "^1.3.19"
+    color "^4.2.3"
+    warn-once "^0.1.0"
 
 "@segment/loosely-validate-event@^2.0.0":
   version "2.0.0"
@@ -3074,12 +3088,7 @@ camelcase@^6.2.0:
   resolved "https://registry.npmjs.org/camelcase/-/camelcase-6.3.0.tgz"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
-camelize@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz"
-  integrity sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==
-
-camelize@^1.0.1:
+camelize@^1.0.0, camelize@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.1.tgz#89b7e16884056331a35d6b5ad064332c91daa6c3"
   integrity sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==
