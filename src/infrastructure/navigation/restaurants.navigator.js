@@ -1,9 +1,6 @@
 import React from "react";
-import { Text } from "react-native";
-import { SafeArea } from "../../components/utility/safe-area.component";
-
 import { createStackNavigator } from "@react-navigation/stack";
-
+import { RestaurantDetailScreen } from "../../features/restaurants/screens/restaurant-detail.screen";
 import { RestaurantsScreen } from "../../features/restaurants/screens/restaurants.screen";
 
 const RestaurantStack = createStackNavigator();
@@ -21,11 +18,7 @@ export const RestaurantsNavigator = () => {
       />
       <RestaurantStack.Screen
         name="RestaurantDetail"
-        component={() => (
-          <SafeArea>
-            <Text>Restaurant Detail</Text>
-          </SafeArea>
-        )}
+        component={RestaurantDetailScreen}
       />
     </RestaurantStack.Navigator>
   );
