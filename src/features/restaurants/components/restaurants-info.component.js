@@ -38,7 +38,7 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
       <View>
         <Favourite />
         <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
-      </View>{" "}
+      </View>
       <Info>
         <Text variant="label">{name}</Text>
         <Section>
