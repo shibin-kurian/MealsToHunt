@@ -1,8 +1,8 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { NavigationLogic } from "./src/infrastructure/navigation/index";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components/native";
-import { initializeApp } from "firebase/app";
+import { firebase, initializeApp } from "firebase/app";
 
 import {
   useFonts as useOswald,
@@ -23,10 +23,26 @@ const firebaseConfig = {
   messagingSenderId: "1090177879394",
   appId: "1:1090177879394:web:7f7f9688ba645051cc703b",
 };
-
-initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  initializeApp(firebaseConfig);
+}
 
 export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword("mo@binni.io", "test123")
+        .then((user) => {
+          setIsAuthenticated(true);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }, 2000);
+  }, []);
+
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });
@@ -36,6 +52,9 @@ export default function App() {
   });
 
   if (!oswaldLoaded || !latoLoaded) {
+    return null;
+  }
+  if (!isAuthenticated) {
     return null;
   }
   return (
