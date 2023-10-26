@@ -6,15 +6,11 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { Search } from "../components/search.component";
+import { RestaurantList } from "../components/restaurant-list.styles";
+
 import { RestaurantInfo } from "../components/restaurants-info.component";
 import { FavouritesBar } from "../../../components/favourites/favourites-bar.component";
 import { FavouritesContext } from "../../../services/favourites/favourites.context";
-
-const RestaurantList = styled(FlatList).attrs({
-  contentContainerStyle: {
-    padding: 16,
-  },
-})``;
 
 const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
