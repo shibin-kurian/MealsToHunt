@@ -14,7 +14,7 @@ const ProfileCamera = styled(Camera)`
 
 const InnerSnap = styled.View`
   width: 100%;
-  height: 100%; 
+  height: 100%;
   z-index: 999;
 `;
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
