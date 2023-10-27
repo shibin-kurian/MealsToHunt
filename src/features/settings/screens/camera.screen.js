@@ -9,6 +9,13 @@ import { Text } from "../../../components/typography/text.component";
 const ProfileCamera = styled(Camera)`
   width: 100%;
   height: 100%;
+  flex: 1;
+`;
+
+const InnerSnap = styled.View`
+  width: 100%;
+  height: 100%; 
+  z-index: 999;
 `;
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 
@@ -39,11 +46,13 @@ export const CameraScreen = ({ navigation }) => {
     return <Text>No access to camera</Text>;
   }
   return (
-    <TouchableOpacity onPress={snap}>
-      <ProfileCamera
-        ref={(camera) => (cameraRef.current = camera)}
-        type={Camera.Constants.Type.front}
-      />
-    </TouchableOpacity>
+    <ProfileCamera
+      ref={(camera) => (cameraRef.current = camera)}
+      type={Camera.Constants.Type.front}
+    >
+      <TouchableOpacity onPress={snap}>
+        <InnerSnap />
+      </TouchableOpacity>
+    </ProfileCamera>
   );
 };

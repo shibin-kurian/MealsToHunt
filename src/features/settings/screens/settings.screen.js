@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useCallback, useState } from "react";
 import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 
@@ -27,7 +27,7 @@ export const SettingsScreen = ({ navigation }) => {
   };
 
   useFocusEffect(
-    React.useCallback(() => {
+    useCallback(() => {
       getProfilePicture(user);
     }, [user])
   );
