@@ -1,2 +1,2 @@
 # MealsToHunt
-A React Native application
+A React Native based application 
