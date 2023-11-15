@@ -2,7 +2,8 @@ import camelize from "camelize";
 
 export const locationRequest = (searchTerm) => {
   return fetch(
-    `http://localhost:5001/mealstogo-b2612/us-central1/geocode?city=${searchTerm}`
+    `https://geocode-3pryqkxixa-uc.a.run.app?city=${searchTerm}`
+    //local url http://localhost:5001/mealstogo-b2612/us-central1/geocode
   ).then((res) => {
     return res.json();
   });
