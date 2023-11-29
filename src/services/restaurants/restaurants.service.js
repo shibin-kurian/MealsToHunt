@@ -1,4 +1,6 @@
 import camelize from "camelize";
+import { host } from "../../utils/env";
+
 export const restaurantsRequest = (location) => {
   return fetch(
     `https://us-central1-mealstohunt.cloudfunctions.net/placesNearby?location=${location}`
